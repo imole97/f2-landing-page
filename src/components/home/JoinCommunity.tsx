@@ -16,7 +16,7 @@ const community = [
 ];
 const JoinCommunity = () => {
   return (
-    <div className="bg-white py-10">
+    <div id="studio" className="bg-white py-10">
       <Container>
         <div className="bg-[#0D102F] w-full px-12 py-16 grid  xl:grid-cols-3 gap-5 rounded-[20px]">
           <div className="flex min-w-0 space-y-5 flex-col">
