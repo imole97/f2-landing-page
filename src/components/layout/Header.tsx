@@ -108,7 +108,7 @@ const Header = () => {
   return (
     
       <div className="relative z-50">
-      <div className="fixed top-6 left-1/2 transform -translate-x-1/2 bg-[#FFFFFF1A] backdrop-blur-xl px-6 md:px-10 py-3 md:py-0 w-[95%] max-w-[1300px] h-[72px] md:h-[80px] rounded-full flex justify-between items-center">
+      <div className="absolute top-6 left-1/2 transform -translate-x-1/2 bg-[#FFFFFF1A] backdrop-blur-xl px-6 md:px-10 py-3 md:py-0 w-[95%] max-w-[1300px] h-[72px] md:h-[80px] rounded-full flex justify-between items-center">
         <CustomImage
           className="aspect-[179/40] h-[clamp(25px,4vw,40px)] w-auto"
           alt="f2-logo"
@@ -156,7 +156,7 @@ const Header = () => {
       </div>
 
        {isMobileMenuOpen && (
-        <div className="lg:hidden z-10 fixed top-[100px] left-0 right-0 bg-white text-black py-6 px-4 space-y-4 rounded-md shadow-lg">
+        <div className="lg:hidden z-10 absolute top-[100px] left-0 right-0 bg-white text-black py-6 px-4 space-y-4 rounded-md shadow-lg">
           {navHeaders.map((item) => (
             <div key={item.title}>
               {item.hasDropdown ? (
