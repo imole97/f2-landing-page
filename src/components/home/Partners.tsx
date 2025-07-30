@@ -28,7 +28,7 @@ const images = [
 ]
 const Partners = () => {
   return (
-  <div className='bg-white w-full pt-20 pb-10'>
+  <div className='bg-white w-full'>
           <h4 className='text-3xl text-center text-[#040404] mb-5 lg:text-5xl font-medium '>Partners</h4>
           <ContinuousScroll speed={300} imageClassName='h-[64px] w-full'  pauseOnHover items={images} />
     </div>

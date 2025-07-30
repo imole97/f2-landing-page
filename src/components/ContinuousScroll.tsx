@@ -38,7 +38,7 @@ const ContinuousScroll: React.FC<TProps> = ({ items, className, imageClassName, 
             `}</style>
 <div className={cn(`relative py-4 w-full overflow-hidden `,className)}>
       <div 
-        className={`flex items-center whitespace-nowrap animate-scroll ${pauseOnHover ? 'hover:pause' : ''}`}
+        className={`flex items-center animate-scroll ${pauseOnHover ? 'hover:pause' : ''}`}
         style={{
           animationDuration: `${(duplicatedItems?.length * 300) / speed}s`,
           animationTimingFunction: 'linear',
@@ -47,7 +47,7 @@ const ContinuousScroll: React.FC<TProps> = ({ items, className, imageClassName, 
           >
               {
                   duplicatedItems?.map((item,index) => (
-                      <div key={index} className={cn('flex-shrink-0 mx-8 flex items-center justify-center',itemClassName)}>
+                      <div key={index} className={cn('flex-shrink-0 mx-2 flex items-center justify-center', itemClassName)}>
                           {items.length  >1 ? (
                               <CustomImage className={cn(`${item.aspect}`,  imageClassName)} alt="scroll-item" src={item?.img||"/images/f2-logo.png"}/>
                           ) : (
