@@ -34,7 +34,7 @@ const testimonials = [
 const Testimonial = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const canGoNext = currentIndex < testimonials.length ;
+  const canGoNext = currentIndex < testimonials.length+5 ;
   const canGoPrev = currentIndex > 0;
 
   const nextTestimonial = () => {
@@ -78,8 +78,8 @@ const Testimonial = () => {
               {testimonials.map((testimonial, index) => (
                 <div
                   key={testimonial.id}
-                  className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 flex-shrink-0"
-                  style={{ width: `${100/testimonials.length}%` }}
+                  className="bg-white rounded-2xl w-full p-8 shadow-sm border border-gray-100 flex-shrink-0"
+                  // style={{ width: `${100/testimonials.length}%` }}
                 >
                   <div className="mb-6">
                     <p className="text-[#333333] font-medium leading-relaxed text-base">
