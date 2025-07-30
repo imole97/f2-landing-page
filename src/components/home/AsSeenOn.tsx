@@ -18,8 +18,8 @@ const images=[
 const AsSeenOn = () => {
   return (
       <div className='bg-white w-full py-10'>
-          {/* <h4 className='text-3xl lg:text-5xl font-medium '>As Seen On</h4>
-          <ContinuousScroll speed={200} imageClassName='aspect-[]' pauseOnHover items={images} /> */}
+          <h4 className='text-3xl text-center text-[#040404] lg:text-5xl font-medium '>As Seen On</h4>
+          <ContinuousScroll speed={200} className='aspect-[304/54] w-full' pauseOnHover items={images} />
     </div>
   )
 }

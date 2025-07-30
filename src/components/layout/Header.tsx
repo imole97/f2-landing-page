@@ -10,15 +10,15 @@ import {
 } from "@headlessui/react";
 import Container from "./Container";
 const navHeaders = [
-  { title: "About", hasDropdown: false, route: "/about" },
-  { title: "Studio", hasDropdown: false, route: "/studio" },
+  { title: "About", hasDropdown: false, route: "" },
+  { title: "Studio", hasDropdown: false, route: "" },
   {
     title: "Portfolio",
     hasDropdown: true,
     route: null,
     subMenu: [
-      { title: "Porfolio Companies", route: "/about" },
-      { title: "Clients' Portfolio", route: "/" },
+      { title: "Porfolio Companies", route: "" },
+      { title: "Clients' Portfolio", route: "" },
     ],
   },
   {
@@ -26,8 +26,8 @@ const navHeaders = [
     hasDropdown: true,
     route: null,
     subMenu: [
-      { title: "F2-Venture Studio Program", route: "/" },
-      { title: "F2-Venture Acceleration Program", route: "/" },
+      { title: "F2-Venture Studio Program", route: "" },
+      { title: "F2-Venture Acceleration Program", route: "" },
     ],
   },
   {
@@ -35,10 +35,10 @@ const navHeaders = [
     hasDropdown: true,
     route: null,
     subMenu: [
-      { title: " F2Nation", route: "/" },
-      { title: "African Ecosystem Mixer", route: "/" },
-      { title: "Unibuilder", route: "/" },
-      { title: "F2 Academy", route: "/" },
+      { title: " F2Nation", route: "" },
+      { title: "African Ecosystem Mixer", route: "" },
+      { title: "Unibuilder", route: "" },
+      { title: "F2 Academy", route: "" },
     ],
   },
   {
@@ -46,9 +46,9 @@ const navHeaders = [
     hasDropdown: true,
     route: null,
     subMenu: [
-      { title: "F2 Insights", route: "/" },
-      { title: "F2 Whitepapers", route: "/" },
-      { title: "Build Boldly", route: "/" },
+      { title: "F2 Insights", route: "" },
+      { title: "F2 Whitepapers", route: "" },
+      { title: "Build Boldly", route: "" },
     ],
   },
   {
@@ -56,8 +56,8 @@ const navHeaders = [
     hasDropdown: true,
     route: null,
     subMenu: [
-      { title: "F2 Republic", route: "/" },
-      { title: "F2Bank", route: "/" },
+      { title: "F2 Republic", route: "" },
+      { title: "F2Bank", route: "" },
     ],
   },
 ];
