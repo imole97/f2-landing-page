@@ -1,4 +1,5 @@
 import ContinuousScroll from "@/components/ContinuousScroll";
+import AsSeenOn from "@/components/home/AsSeenOn";
 import BookSession from "@/components/home/BookSession";
 import ClientPortfolio from "@/components/home/ClientPortfolio";
 import FAQ from "@/components/home/FAQ";
@@ -6,7 +7,9 @@ import HeroSection from "@/components/home/HeroSection";
 import JoinCommunity from "@/components/home/JoinCommunity";
 import Newsletter from "@/components/home/Newsletter";
 import OurTeam from "@/components/home/OurTeam";
+import Partners from "@/components/home/Partners";
 import Portfolio from "@/components/home/Portfolio";
+import PortfolioInvestors from "@/components/home/PortfolioInvestors";
 import Statistics from "@/components/home/Statistics";
 import Testimonial from "@/components/home/Testimonial";
 import WhyWeExist from "@/components/home/WhyWeExist";
@@ -29,6 +32,9 @@ export default function Home() {
       <JoinCommunity />
       <OurTeam />
       <BookSession />
+      <AsSeenOn />
+      <Partners />
+      <PortfolioInvestors/>
       <Testimonial />
       <FAQ/>
     </>

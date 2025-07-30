@@ -44,7 +44,7 @@ const JoinCommunity = () => {
                 className="aspect-[406/310] h-auto w-auto"
               />
               <div className="bg-[#0D102F] opacity-50 absolute inset-0"></div>
-              <div className="left-0 bottom-[8px] text-xl mx-2 z-30 bg-[#5F5F5F33] h-fit backdrop-blur-xl px-3 py-2 right-0 absolute  rounded-lg ">
+              <div className="left-0 bottom-[8px] text-[9px] sm:text-sm md:text-base lg:text-xl mx-2 z-30 bg-[#5F5F5F33] h-fit backdrop-blur-xl px-3 py-2 right-0 absolute  rounded-lg ">
                 <p>{item.content}</p>
               </div>
             </div>
