@@ -1,5 +1,6 @@
 import ContinuousScroll from "@/components/ContinuousScroll";
 import AsSeenOn from "@/components/home/AsSeenOn";
+import AwardRecognition from "@/components/home/AwardRecognition";
 import BookSession from "@/components/home/BookSession";
 import ClientPortfolio from "@/components/home/ClientPortfolio";
 import FAQ from "@/components/home/FAQ";
@@ -34,7 +35,8 @@ export default function Home() {
       <BookSession />
       <AsSeenOn />
       <Partners />
-      <PortfolioInvestors/>
+      <PortfolioInvestors />
+      <AwardRecognition/>
       <Testimonial />
       <FAQ/>
     </>
