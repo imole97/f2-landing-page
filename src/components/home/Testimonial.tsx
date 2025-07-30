@@ -78,7 +78,7 @@ const Testimonial = () => {
               {testimonials.map((testimonial, index) => (
                 <div
                   key={testimonial.id}
-                  className="bg-white rounded-2xl w-full p-8 shadow-sm border border-gray-100 flex-shrink-0"
+                  className="bg-white rounded-2xl w-full max-w-[600px] p-8 shadow-sm border border-gray-100 flex-shrink-0"
                   // style={{ width: `${100/testimonials.length}%` }}
                 >
                   <div className="mb-6">

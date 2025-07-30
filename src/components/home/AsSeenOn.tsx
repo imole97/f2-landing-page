@@ -13,13 +13,13 @@ const images=[
     "/images/thisday.png",
     "/images/techcabal.png",
     "/images/studio.jpg",
-    "/images/.png",
+  
 ]
 const AsSeenOn = () => {
   return (
       <div className='bg-white w-full py-10'>
           <h4 className='text-3xl text-center text-[#040404] lg:text-5xl font-medium '>As Seen On</h4>
-          <ContinuousScroll speed={200} className='aspect-[304/54] w-full' pauseOnHover items={images} />
+          <ContinuousScroll speed={200} imageClassName='aspect-[304/54] flex-1 !object-contain w-full' pauseOnHover items={images} />
     </div>
   )
 }

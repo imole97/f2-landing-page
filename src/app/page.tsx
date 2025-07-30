@@ -32,9 +32,9 @@ export default function Home() {
       <JoinCommunity />
       <OurTeam />
       <BookSession />
-      <AsSeenOn />
+      {/* <AsSeenOn />
       <Partners />
-      <PortfolioInvestors/>
+      <PortfolioInvestors/> */}
       <Testimonial />
       <FAQ/>
     </>
