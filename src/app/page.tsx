@@ -33,8 +33,8 @@ export default function Home() {
       <OurTeam />
       <BookSession />
       <AsSeenOn />
-      {/* <Partners />
-      <PortfolioInvestors/> */}
+      <Partners />
+      {/* <PortfolioInvestors/> */}
       <Testimonial />
       <FAQ/>
     </>
