@@ -75,11 +75,21 @@ const Header = () => {
     if (navItem.hasDropdown) {
       return (
         <Popover key={navItem.title}>
+          {({ open }) => (
+            <>
           <PopoverButton className="border-none flex items-center font-medium cursor-pointer outline-none">
             {navItem.title}
-            <span>
-              <Icon icon="line-md:chevron-small-down" width="24" height="24" />
-            </span>
+            <span
+                className={`transition-transform duration-300 ${
+                  open ? "rotate-180" : "rotate-0"
+                }`}
+              >
+                <Icon
+                  icon="line-md:chevron-small-down"
+                  width="20"
+                  height="20"
+                />
+              </span>
           </PopoverButton>
           <PopoverPanel
             transition
@@ -97,6 +107,8 @@ const Header = () => {
               </CloseButton>
             ))}
           </PopoverPanel>
+            </>
+          )}
         </Popover>
       );
     } else {
@@ -164,11 +176,21 @@ const Header = () => {
             <div key={item.title}>
               {item.hasDropdown ? (
                 <Popover>
-                  <PopoverButton className="w-full flex items-center text-left font-semibold">
+                  {({ open }) => (
+                    <>
+                  <PopoverButton className=" flex items-center justify-between w-full text-left font-semibold">
                     {item.title}
-                    {/* <span>
-              <Icon icon="line-md:chevron-small-down" width="24" height="24" />
-            </span> */}
+                    <span
+                className={`transition-transform duration-300 ${
+                  open ? "rotate-180" : "rotate-0"
+                }`}
+              >
+                <Icon
+                  icon="line-md:chevron-small-down"
+                  width="20"
+                  height="20"
+                />
+              </span>
                   </PopoverButton>
                   <PopoverPanel className="bg-gray-100 mt-2 rounded-lg p-2 text-sm">
                     {item.subMenu?.map((sub) => (
@@ -183,6 +205,8 @@ const Header = () => {
                       </CloseButton>
                     ))}
                   </PopoverPanel>
+                    </>
+                  )}
                 </Popover>
               ) : (
                 <Link
