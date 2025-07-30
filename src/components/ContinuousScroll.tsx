@@ -21,7 +21,7 @@ const ContinuousScroll: React.FC<TProps> = ({
   const duplicatedItems =
     items.length === 1
       ? Array(8).fill(items[0]).flat() // Repeat single item 8 times
-      : [...items, ...items];
+      : [...items, ...items,...items];
   console.log({ duplicatedItems });
   return (
     <>
@@ -51,13 +51,16 @@ const ContinuousScroll: React.FC<TProps> = ({
       `}</style>
       <div className={cn(`relative py-4 w-full overflow-hidden `, className)}>
         <div
-          className={cn(
-            'scrolling-wrapper animate-scroll',
-            pauseOnHover ? 'hover:pause' : ''
-          )}
-          style={{
-            animationDuration: `${(duplicatedItems.length * 300) / speed}s`
-          }}
+         className={cn(
+        'inline-flex animate-scroll',
+        pauseOnHover ? 'group-hover:paused' : ''
+      )}
+      style={{
+        animationDuration: `${(duplicatedItems.length * 300) / speed}s`,
+        animationTimingFunction: 'linear',
+        animationIterationCount: 'infinite',
+        animationName: 'scroll',
+      }}
         >
           {duplicatedItems?.map((item, index) => (
             <div

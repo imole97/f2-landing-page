@@ -34,7 +34,7 @@ export default function Home() {
       <BookSession />
       <AsSeenOn />
       <Partners />
-      {/* <PortfolioInvestors/> */}
+      <PortfolioInvestors/>
       <Testimonial />
       <FAQ/>
     </>
