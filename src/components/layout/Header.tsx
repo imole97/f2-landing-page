@@ -9,6 +9,7 @@ import {
   PopoverPanel,
 } from "@headlessui/react";
 import Container from "./Container";
+import { Icon } from "@iconify/react/dist/iconify.js";
 const navHeaders = [
   { title: "About", hasDropdown: false, route: "" },
   { title: "Studio", hasDropdown: false, route: "" },
@@ -74,9 +75,11 @@ const Header = () => {
     if (navItem.hasDropdown) {
       return (
         <Popover key={navItem.title}>
-          <PopoverButton className="border-none font-medium cursor-pointer outline-none">
+          <PopoverButton className="border-none flex items-center font-medium cursor-pointer outline-none">
             {navItem.title}
-            
+            <span>
+              <Icon icon="line-md:chevron-small-down" width="24" height="24" />
+            </span>
           </PopoverButton>
           <PopoverPanel
             transition
@@ -161,8 +164,11 @@ const Header = () => {
             <div key={item.title}>
               {item.hasDropdown ? (
                 <Popover>
-                  <PopoverButton className="w-full text-left font-semibold">
+                  <PopoverButton className="w-full flex items-center text-left font-semibold">
                     {item.title}
+                    {/* <span>
+              <Icon icon="line-md:chevron-small-down" width="24" height="24" />
+            </span> */}
                   </PopoverButton>
                   <PopoverPanel className="bg-gray-100 mt-2 rounded-lg p-2 text-sm">
                     {item.subMenu?.map((sub) => (
