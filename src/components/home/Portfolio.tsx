@@ -53,7 +53,7 @@ const Portfolio = () => {
       <Container className="">
         <div className="flex justify-center">
 
-      <div className="bg-[#FFBB00]  justify-center py-2 px-4 rounded-full text-[#040404] font-medium">
+      <div id="portfolio-companies" className="bg-[#FFBB00]  justify-center py-2 px-4 rounded-full text-[#040404] font-medium">
       
         Portfolio Companies
       </div>

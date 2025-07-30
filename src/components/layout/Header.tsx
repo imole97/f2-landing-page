@@ -11,21 +11,21 @@ import {
 import Container from "./Container";
 import { Icon } from "@iconify/react/dist/iconify.js";
 const navHeaders = [
-  { title: "About", hasDropdown: false, route: "" },
-  { title: "Studio", hasDropdown: false, route: "" },
+  { title: "About", hasDropdown: false, route: "#about" },
+  { title: "Studio", hasDropdown: false, route: "#studio" },
   {
     title: "Portfolio",
     hasDropdown: true,
-    route: null,
+    route: "",
     subMenu: [
-      { title: "Porfolio Companies", route: "" },
-      { title: "Clients' Portfolio", route: "" },
+      { title: "Porfolio Companies", route: "#portfolio-companies" },
+      { title: "Clients' Portfolio", route: "#client-portfolio" },
     ],
   },
   {
     title: "Program",
     hasDropdown: true,
-    route: null,
+    route: "",
     subMenu: [
       { title: "F2-Venture Studio Program", route: "" },
       { title: "F2-Venture Acceleration Program", route: "" },
@@ -34,7 +34,7 @@ const navHeaders = [
   {
     title: "Collective",
     hasDropdown: true,
-    route: null,
+    route: "",
     subMenu: [
       { title: " F2Nation", route: "" },
       { title: "African Ecosystem Mixer", route: "" },
@@ -45,7 +45,7 @@ const navHeaders = [
   {
     title: "Insights",
     hasDropdown: true,
-    route: null,
+    route: "",
     subMenu: [
       { title: "F2 Insights", route: "" },
       { title: "F2 Whitepapers", route: "" },
@@ -55,7 +55,7 @@ const navHeaders = [
   {
     title: "SubUnits",
     hasDropdown: true,
-    route: null,
+    route: "",
     subMenu: [
       { title: "F2 Republic", route: "" },
       { title: "F2Bank", route: "" },
@@ -66,6 +66,7 @@ const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const renderNav = (navItem: {
     title: string;
+    route: string;
     hasDropdown: boolean;
     subMenu?: {
       title: string;
@@ -78,7 +79,8 @@ const Header = () => {
           {({ open }) => (
             <>
           <PopoverButton className="border-none flex items-center font-medium cursor-pointer outline-none">
-            {navItem.title}
+            
+                {navItem.title}
             <span
                 className={`transition-transform duration-300 ${
                   open ? "rotate-180" : "rotate-0"
@@ -113,7 +115,7 @@ const Header = () => {
       );
     } else {
       return (
-        <Link key={navItem.title}  className="font-medium shrink" href="/">
+        <Link key={navItem.title}  className="font-medium shrink" href={navItem.route}>
           {navItem.title}
         </Link>
       );

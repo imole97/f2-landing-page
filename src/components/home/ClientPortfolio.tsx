@@ -13,7 +13,7 @@ const ClientPortfolio = () => {
     <div className="bg-white">
       <Container>
         <div className="flex pt-16 justify-center">
-          <div className="bg-[#FFBB00]  justify-center py-2 px-4 rounded-full text-[#040404] font-medium">
+          <div id="client-portfolio" className="bg-[#FFBB00]  justify-center py-2 px-4 rounded-full text-[#040404] font-medium">
             Clients’ Portfolio
           </div>
         </div>

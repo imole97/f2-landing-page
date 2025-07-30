@@ -15,7 +15,7 @@ const stats = [
 ];
 const Statistics = () => {
   return (
-    <div className="bg-white py-10">
+    <div id="about" className="bg-white py-10">
       <Container className="flex flex-col">
         <div className="flex flex-col gap-5 lg:flex-row">
           {stats.map((stat) => (
