@@ -3,7 +3,7 @@ import { cn } from '@/lib/utils';
 import React from 'react'
 import CustomImage from './ui/CustomImages';
 type TProps = {
-    items: string[];
+    items: string[]|Array<Record<string,string>>;
     className?: string;
     pauseOnHover?: boolean;
     speed: number;
@@ -14,7 +14,8 @@ type TProps = {
 const ContinuousScroll: React.FC<TProps> = ({ items, className, imageClassName, itemClassName, speed, pauseOnHover }) => {
      const duplicatedItems = items.length === 1 
     ? Array(8).fill(items[0]).flat()  // Repeat single item 8 times
-    : [...items, ...items];  
+        : [...items, ...items];  
+    console.log({duplicatedItems})
     return (
         <>
             <style jsx>{`
@@ -48,7 +49,7 @@ const ContinuousScroll: React.FC<TProps> = ({ items, className, imageClassName, 
                   duplicatedItems?.map((item,index) => (
                       <div key={index} className={cn('flex-shrink-0 mx-8 flex items-center justify-center',itemClassName)}>
                           {items.length  >1 ? (
-                              <CustomImage className={cn('w-auto',imageClassName)} alt="scroll-item" src={item||"/images/f2-logo.png"}/>
+                              <CustomImage className={cn(`${item.aspect}`,  imageClassName)} alt="scroll-item" src={item?.img||"/images/f2-logo.png"}/>
                           ) : (
                                   <p className='text-4xl lg:text-5xl'> { item}</p>
                           )}
