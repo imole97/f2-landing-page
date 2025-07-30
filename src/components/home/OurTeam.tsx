@@ -37,7 +37,7 @@ const team = [
   },
   {
     img: "/images/director.jpg",
-    name: "Ibukunoluwa Dada ",
+    name: "Dada Morakinyo IbukunOluwa ",
     title: "Venture Studio Director",
     twitter: "",
     aspect: "aspect-[414/440]",
@@ -78,7 +78,7 @@ const OurTeam = () => {
                 src={item.img}
               />
               <div className="absolute bottom-[20px] left-2 right-2   z-10 bg-[#0D102F] rounded-[20px] p-5">
-                <p>{item.name}</p>
+                <p className="font-bold text-lg lg:text-2xl">{item.name}</p>
                 <p>{item.title}</p>
               </div>
               <div className="flex z-10 flex-col absolute right-2 top-2 gap-2">
