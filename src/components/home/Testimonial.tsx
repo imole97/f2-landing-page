@@ -67,7 +67,7 @@ const Testimonial = () => {
 
       {/* testimonial cards */}
       <Container className="relative">
-          <div className="overflow-x-hidden">
+          <div className="overflow-x-auto no-scrollbar">
             <div 
               className="flex transition-transform duration-500 ease-in-out gap-6"
               style={{

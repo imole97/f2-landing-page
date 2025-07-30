@@ -30,7 +30,11 @@ body {
   color: var(--foreground);
   font-family: var(--font-satoshi), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
-
+@layer utilities{
+ .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
 /* Optional: Define font weight utilities for Satoshi */
 .font-satoshi-regular {
   font-family: var(--font-satoshi);
