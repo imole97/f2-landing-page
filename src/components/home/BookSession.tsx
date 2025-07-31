@@ -2,6 +2,7 @@ import React from 'react'
 import Container from '../layout/Container'
 import CustomImage from '../ui/CustomImages'
 import { Icon } from '@iconify/react/dist/iconify.js'
+import Link from 'next/link'
 
 const BookSession = () => {
   return (
@@ -14,14 +15,14 @@ const BookSession = () => {
                           <p className="text-xl text-[#040404]">
                            Ready to build your audacious AI-first venture with us? From ideation to launch and growth, we provide end-to-end, hands-on venture building support to bring your bold AI or Startup vision to life.
                           </p>
-                          <button className="bg-[#040404] mt-10 items-center py-3.5 px-5 w-fit text-white rounded-full flex gap-2">
+                          <Link target='_blank' href="https://calendly.com/thefirstfounders/60min"  className="bg-[#040404] mt-10 items-center py-3.5 px-5 w-fit text-white rounded-full flex gap-2">
                             <span>Book A Clarity Session</span>
                             <Icon
                               icon="material-symbols:arrow-forward-rounded"
                               width="16"
                               height="16"
                             />
-                          </button>
+                          </Link>
                                 </div>
               </div>
           </Container>

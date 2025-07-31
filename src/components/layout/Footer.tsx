@@ -1,6 +1,7 @@
 import React from "react";
 import Container from "./Container";
 import CustomImage from "../ui/CustomImages";
+import Link from "next/link";
 const socials = [
   "/images/facebook.png",
   "/images/insta.png",
@@ -66,7 +67,7 @@ const Footer = () => {
           <div className="flex gap-4 flex-col">
             <p className="font-medium text-xl">Company</p>
             <p>Newsroom</p>
-            <p>Contact Us</p>
+            <Link target="_blank" href="https://calendly.com/thefirstfounders/60min">Contact Us</Link>
           </div>
           <div className="flex w-fit gap-4 flex-col">
             <p className="font-medium text-xl">Stay Connected</p>
