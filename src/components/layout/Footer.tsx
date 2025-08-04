@@ -25,9 +25,9 @@ const Footer = () => {
               into thriving ventures, one bold step at a time.
             </p>
             <div>
-              <button className="bg-[#FFBB00]  font-medium  py-3 px-4 w-fit text-[#0D102F] rounded-full ">
-                <span>Get Started Now</span>
-              </button>
+              <Link target="_blank" href="https://calendly.com/thefirstfounders/60min"  className="bg-[#FFBB00]  font-medium  py-3 px-4 w-fit text-[#0D102F] rounded-full ">
+                Get Started Now
+              </Link>
             </div>
           </div>
           {/* <div className="absolute z-30 top-0 -left-[556px]"> */}
