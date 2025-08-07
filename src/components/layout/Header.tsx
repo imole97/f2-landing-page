@@ -47,7 +47,7 @@ const navHeaders = [
     hasDropdown: true,
     route: "",
     subMenu: [
-      { title: "F2 Insights", route: "" },
+      { title: "F2 Insights", route: "/insights" },
       { title: "F2 Whitepapers", route: "" },
       { title: "Build Boldly", route: "" },
     ],
@@ -126,6 +126,7 @@ const Header = () => {
     
       <div className="relative z-50">
       <div className="absolute top-6 left-1/2 transform -translate-x-1/2 bg-[#FFFFFF1A] backdrop-blur-xl px-6 md:px-10 py-3 md:py-0 w-[95%] max-w-[1300px] h-[72px] md:h-[80px] rounded-full flex justify-between items-center">
+        <Link href="/">
         <CustomImage
           className="aspect-[179/40] h-[clamp(25px,4vw,40px)] w-auto"
           alt="f2-logo"
@@ -133,7 +134,8 @@ const Header = () => {
           quality={100}
           loading="eager"
           priority
-        />
+          />
+          </Link>
 
         <nav className="hidden lg:flex gap-6 items-center">
           {navHeaders.map((header) => renderNav(header))}

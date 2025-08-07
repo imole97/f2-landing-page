@@ -26,18 +26,7 @@ export default function RootLayout({
     const handleScroll = () => {
       setShowBackToTop(window.scrollY > 300);
       
-      // // Update active section based on scroll position
-      // const sections = document.querySelectorAll('section[id]');
-      // let current = '';
-      
-      // sections.forEach((section) => {
-      //   const sectionTop = (section as HTMLElement).offsetTop - 100;
-      //   if (window.scrollY >= sectionTop) {
-      //     current = section.getAttribute('id') || '';
-      //   }
-      // });
-      
-      // setActiveSection(current);
+      // // Update active section based on scroll posi
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -50,24 +39,9 @@ export default function RootLayout({
   return (
     <html suppressHydrationWarning lang="en">
       <body
-        className={`${satoshi.variable} antialiased`}
+        className={`${satoshi.variable} antialiased min-h-screen`}
       >
-        <div className="relative flex flex-col h-screen">
-          <main className="flex-grow">
-            <Header/>
-            {children}
-            <Footer />
-              {showBackToTop && (
-        <button
-          onClick={scrollToTop}
-          className="fixed bottom-8 right-8 bg-gradient-to-b from-[#DAA520] to-[#D35400] text-white p-3 rounded-full shadow-lg transition-all duration-300 z-50"
-          aria-label="Back to top"
-        >
-        <Icon icon="line-md:chevron-up" width="24" height="24" />
-        </button>
-      )}
-           </main>
-         </div>
+       {children}
       </body>
     </html>
   );
