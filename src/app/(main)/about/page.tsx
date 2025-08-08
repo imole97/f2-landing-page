@@ -1,4 +1,5 @@
 import { Butterfly } from "@/components/icons";
+import Container from "@/components/layout/Container";
 import CustomImage from "@/components/ui/CustomImages";
 import Image from "next/image";
 import React from "react";
@@ -58,6 +59,7 @@ const About = () => {
   return (
     <>
       <section className="bg-[#0D102F] text-center py-40">
+        {/* <div className=" max-w-[1400px] mx-auto"></div> */}
         <p className="text-lg font-bold">F2 Story</p>
         <h4 className="text-3xl px-[5%] mx-auto font-bold max-w-[850px] lg:text-7xl">
           Born from a Desire to See Others Rise.
@@ -67,7 +69,7 @@ const About = () => {
             alt="hero-image"
             imgClassname="rounded-[20px]"
             src="/images/aboutHero1.jpg"
-            className="aspect-[497/500] h-[500px] w-[65%]"
+            className="aspect-[497/500] h-[500px]  w-[65%]"
           />
           <CustomImage
             alt="hero-image"
@@ -79,6 +81,7 @@ const About = () => {
       </section>
 
       <section className="py-20 px-[5%] bg-white">
+     
         <div className="relative">
           {/* Timeline line - positioned to align with butterfly icons */}
           <div className="absolute left-[100px] h-full top-0 bottom-0 border-l border-dashed border-[#0D102F]"></div>

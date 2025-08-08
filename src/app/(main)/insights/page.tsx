@@ -11,8 +11,8 @@ const Insights = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <section className=" bg-[#0D102F] w-full py-[120px] px-[5%]">
-      <div className="flex  max-w-[1400px] mx-auto flex-col gap-5 items-center md:flex-row">
+    <section className=" bg-[#0D102F] w-full py-[150px] px-[5%]">
+      <div className="flex  max-w-[1440px] mx-auto flex-col gap-5 md:flex-row">
         <div className="w-full max-w-[600px] space-y-5">
           {/* <div className="px-4 py-1.5 w-fit rounded-full text-[#33CCCC] bg-[#33CCCC1A]">
               FirstFounders Insight Report
@@ -42,7 +42,7 @@ const Insights = () => {
         </div>
 
         <CustomImage
-          className="aspect-[652/671] lg:w-[652px]"
+          className="aspect-[652/671] w-full"
           src="/images/venture-book.png"
           alt="book"
           imgClassname="rounded-[20px]"

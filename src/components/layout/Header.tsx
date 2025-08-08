@@ -12,14 +12,14 @@ import Container from "./Container";
 import { Icon } from "@iconify/react/dist/iconify.js";
 const navHeaders = [
   { title: "About", hasDropdown: false, route: "/about" },
-  { title: "Studio", hasDropdown: false, route: "#studio" },
+  { title: "Studio", hasDropdown: false, route: "/#studio" },
   {
     title: "Portfolio",
     hasDropdown: true,
     route: "",
     subMenu: [
-      { title: "Porfolio Companies", route: "#portfolio-companies" },
-      { title: "Clients' Portfolio", route: "#client-portfolio" },
+      { title: "Porfolio Companies", route: "/#portfolio-companies" },
+      { title: "Clients' Portfolio", route: "/#client-portfolio" },
     ],
   },
   {
@@ -146,12 +146,14 @@ const Header = () => {
           className="hidden lg:flex bg-white rounded-full py-2 px-4 text-black font-bold gap-2 items-center shadow-sm"
         >
           <span>Build Now</span>
+          <Link target='_blank' href="https://calendly.com/thefirstfounders/60min">
           <CustomImage
             alt="build-now"
             className="aspect-[44/44] h-[44px] w-[44px]"
             priority
             src="/images/build-now.png"
-          />
+            />
+            </Link>
         </button>
 
         <div className="lg:hidden">
