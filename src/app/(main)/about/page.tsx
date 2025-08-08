@@ -81,7 +81,7 @@ const About = () => {
       </section>
 
       <section className="py-20 px-[5%] bg-white">
-     
+     <Container>
         <div className="relative">
           {/* Timeline line - positioned to align with butterfly icons */}
           <div className="absolute left-[100px] h-full top-0 bottom-0 border-l border-dashed border-[#0D102F]"></div>
@@ -121,14 +121,13 @@ const About = () => {
             ))}
           </div>
         </div>
-
         <div className="bg-gray-900 z-50 text-white mt-20 p-8 rounded-xl">
           <div className="flex items-center gap-2 mb-4">
             <CustomImage
               alt="f2-image"
               className="aspect-[48/48] max-w-[48px] h-[48px]"
               src="/images/f2.png"
-            />
+              />
             <h2 className="text-3xl text-[#33CCCC] font-semibold">About Us</h2>
           </div>
           <p className="text-base md:text-3xl leading-relaxed mb-4">
@@ -148,8 +147,10 @@ const About = () => {
             journey from initial concept to a scaled, acquirable product.
           </p>
         </div>
+              </Container>
       </section>
       <section className="bg-white px-[5%] py-10">
+        <Container>
         <div className="flex gap-12 flex-col lg:flex-row ">
           <CustomImage
             alt="value-image"
@@ -174,9 +175,11 @@ const About = () => {
               ))}
             </div>
           </div>
-        </div>
+          </div>
+          </Container>
       </section>
       <section className="bg-white px-[5%] py-10">
+        <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Left side - Brand Promise */}
           <div className="bg-[#EBFAFA] h-fit p-8 rounded-2xl">
@@ -229,7 +232,8 @@ const About = () => {
               </p>
             </div>
           </div>
-        </div>
+          </div>
+          </Container>
       </section>
     </>
   );
