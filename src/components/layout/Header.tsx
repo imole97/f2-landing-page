@@ -11,7 +11,7 @@ import {
 import Container from "./Container";
 import { Icon } from "@iconify/react/dist/iconify.js";
 const navHeaders = [
-  { title: "About", hasDropdown: false, route: "#about" },
+  { title: "About", hasDropdown: false, route: "/about" },
   { title: "Studio", hasDropdown: false, route: "#studio" },
   {
     title: "Portfolio",

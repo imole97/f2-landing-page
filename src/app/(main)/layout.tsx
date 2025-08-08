@@ -29,7 +29,7 @@ export default function MainLayout({
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
   return (
-    <main>
+    <main className="">
       <Header />
       {children}
       <Footer />
