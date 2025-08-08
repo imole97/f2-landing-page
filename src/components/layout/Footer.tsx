@@ -57,11 +57,11 @@ const Footer = () => {
           <div className="flex gap-4 flex-col">
             <p className="font-medium text-xl">Support</p>
             <p>FAQs</p>
-            <p>About Us</p>
+            <Link  href="/about">About Us</Link>
           </div>
           <div className="flex gap-4 flex-col">
             <p className="font-medium text-xl">Resources</p>
-            <p>Insights</p>
+            <Link href="/insights">Insights</Link>
             <p>Community</p>
           </div>
           <div className="flex gap-4 flex-col">
