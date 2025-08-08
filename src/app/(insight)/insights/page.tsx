@@ -39,7 +39,7 @@ const Insights = () => {
             <p className="text-lg lg:text-xl">
               Explore FirstFounders’ revolutionary approach to venture building
               in Nigeria, and discover how we’re paving the way for the next
-              generation of AI-driven ventures across Africa.
+              generation of n ventures across Africa.
             </p>
             <button type="button" onClick={handleOpenModal} className="bg-[#FFBB00] font-semibold text-[#0D102F] px-10 py-4 rounded-full">
               <span>Download Insight Report</span>

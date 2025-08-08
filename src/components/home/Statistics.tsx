@@ -41,7 +41,7 @@ const Statistics = () => {
           <div className="xl:max-w-[626px]">
 
             <h2 className="text-3xl text-[#040404] mb-6 leading-tight">
-              <span className="font-bold">Firstfounders (F2)</span> is an AI-first venture studio and dynamic ecosystem collective building, funding and scaling the transformative ideas of visionary African entrepreneurs into high-value, acquirable AI-driven venture across key sectors like fintech, consumer and entertainment.
+              <span className="font-bold">FirstFounders (F2)</span> is an AI-first venture studio and dynamic ecosystem collective building, funding and scaling the transformative ideas of visionary African entrepreneurs into high-value, acquirable AI-driven ventures across key sectors like fintech, consumer and entertainment.
             </h2>
             
             <p className="text-3xl text-[#040404] leading-relaxed mb-8">
