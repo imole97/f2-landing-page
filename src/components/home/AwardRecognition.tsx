@@ -25,6 +25,30 @@ const images = [
     img: "/images/gen-award.png",
     aspect:"aspect-[400/252]"
   },
+  {
+    img: "/images/top100.png",
+    aspect:"aspect-[400/252]"
+  },
+  {
+    img: "/images/top10.png",
+    aspect:"aspect-[400/252]"
+  },
+  {
+    img: "/images/builder-award.png",
+    aspect:"aspect-[400/252]"
+  },
+  {
+    img: "/images/top-ceo.png",
+    aspect:"aspect-[400/205]"
+  },
+  {
+    img: "/images/lbs.png",
+    aspect:"aspect-[400/252]"
+  },
+  {
+    img: "/images/gen-award.png",
+    aspect:"aspect-[400/252]"
+  },
 ]
 const AwardRecognition = () => {
   return (
