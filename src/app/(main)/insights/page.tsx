@@ -11,7 +11,7 @@ const Insights = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <section className=" bg-[#0D102F]  py-[120px]  px-[5%]">
+    <section className=" bg-[#0D102F] w-full py-[120px] px-[5%]">
       <div className="flex flex-col gap-5 items-center md:flex-row">
         <div className="w-full max-w-[600px] space-y-5">
           {/* <div className="px-4 py-1.5 w-fit rounded-full text-[#33CCCC] bg-[#33CCCC1A]">
