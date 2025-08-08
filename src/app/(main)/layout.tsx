@@ -14,7 +14,7 @@ export default function MainLayout({
   children: React.ReactNode;
 }>) {
   const [showBackToTop, setShowBackToTop] = useState(false);
-  const [showdownload,setShowdownload] = useState(false)
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,9 +31,7 @@ export default function MainLayout({
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  useEffect(() => {
-setShowdownload(true)
-  },[])
+
   return (
     <main className="">
       <Header />
@@ -48,7 +46,7 @@ setShowdownload(true)
           <Icon icon="line-md:chevron-up" width="24" height="24" />
         </button>
       )}
-      {showdownload ? <DownloadModal isOpen={ showdownload} onClose={()=>setShowdownload(false)} />:null}
+ 
     </main>
   );
 }

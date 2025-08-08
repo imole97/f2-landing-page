@@ -1,11 +1,14 @@
 'use client'
+import Container from '@/components/layout/Container';
+import FileDownloadedModal from '@/components/modals/FileDownloadedModal';
+import CustomImage from '@/components/ui/CustomImages';
 import React, { useEffect } from 'react'
 
 const Download = () => {
      useEffect(() => {
     const downloadPdf = () => {
       const link = document.createElement('a');
-      link.href = `https://drive.google.com/uc?export=download&id=1Uggoj-AlJRDTHifJjqnug9tfTNXHkPQt`;
+      link.href = `https://drive.google.com/uc?export=download&id=14ysso4ImRn4nbhI74fzoVxuvhrn9YVIV`;
       link.download = 'file.pdf'; // Specify the file name for the downloaded file
       link.click();
     };
@@ -13,7 +16,18 @@ const Download = () => {
     downloadPdf();
   }, []);
   return (
-    <div>Download</div>
+    <section className='bg-[#0D102F]'>
+
+    <Container className='flex justify-center pt-30 pb-10 '>
+      <CustomImage
+          className="aspect-[652/671] h-[652px] "
+          src="/images/venture-book.png"
+          alt="book"
+          imgClassname="rounded-[20px]"
+          />
+          <FileDownloadedModal/>
+    </Container>
+          </section>
   )
 }
 
