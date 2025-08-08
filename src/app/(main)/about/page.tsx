@@ -35,7 +35,7 @@ const values = [
   },
 ];
 
-export const timelineData = [
+const timelineData = [
   {
     year: "2006",
     image: "/images/paper.jpg",
