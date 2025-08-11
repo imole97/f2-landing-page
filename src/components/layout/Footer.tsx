@@ -3,12 +3,15 @@ import Container from "./Container";
 import CustomImage from "../ui/CustomImages";
 import Link from "next/link";
 const socials = [
-  "/images/facebook.png",
-  "/images/insta.png",
-  "/images/linkedin.png",
-  "/images/x.png",
-  "/images/tiktok.png",
-  "/images/youtube.png",
+  {
+    img: "/images/facebook.png",
+    link:"https://web.facebook.com/thefirstfounders/"
+  },
+ {img: "/images/insta.png",link:"https://www.instagram.com/firstfounders.cc/"},
+  {img:"/images/linkedin.png",link:"https://www.linkedin.com/company/firstfoundersventurestudio/"},
+  {img:"/images/x.png",link:"https://x.com/firstfounderscc"},
+  {img:"/images/tiktok.png",link:"https://www.tiktok.com/@firstfounders"},
+  {img:"/images/youtube.png",link:"https://www.youtube.com/@FirstFounders"},
 ];
 const Footer = () => {
   return (
@@ -56,7 +59,7 @@ const Footer = () => {
           </div>
           <div className="flex gap-4 flex-col">
             <p className="font-medium text-xl">Support</p>
-            <p>FAQs</p>
+            <Link href="/#faq">FAQs</Link>
             <Link  href="/about">About Us</Link>
           </div>
           <div className="flex gap-4 flex-col">
@@ -73,12 +76,14 @@ const Footer = () => {
             <p className="font-medium text-xl">Stay Connected</p>
             <div className="grid gap-2 grid-cols-3">
               {socials.map((item) => (
+              <Link  key={item.img} href={item.link} target="_blank">
                 <CustomImage
-                  key={item}
-                  alt="socials"
-                  className="aspect-[24/24] w-[24px] h-[24px]"
-                  src={item}
+               
+                alt="socials"
+                className="aspect-[24/24] w-[24px] h-[24px]"
+                src={item.img}
                 />
+              </Link>
               ))}
             </div>
           </div>

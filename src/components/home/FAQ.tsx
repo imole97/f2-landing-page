@@ -40,7 +40,7 @@ const FAQ = () => {
     };
 
   return (
-      <div className='bg-white py-10'>
+      <div id="faq" className='bg-white py-10'>
           <h5 className='font-medium text-4xl text-center my-5 max-w-[729px] leading-[120%] text-[#040404] mx-auto  lg:text-6xl'>Frequently Asked Questions</h5>
           <div className="max-w-[1140px] mx-auto p-6 bg-white">
       <div className="space-y-0">
