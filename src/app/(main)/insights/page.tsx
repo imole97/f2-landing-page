@@ -28,7 +28,7 @@ const Insights = () => {
               <p className="text-lg lg:text-xl">
                 Explore FirstFounders’ revolutionary approach to venture
                 building in Nigeria, and discover how we’re paving the way for
-                the next generation of n ventures across Africa.
+                the next generation of ventures across Africa.
               </p>
               <button
                 type="button"
