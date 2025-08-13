@@ -29,7 +29,7 @@ export default function Home() {
     <>
       <HeroSection />
       <div className="bg-[#0D102F]  border-t-2 border-[#FFBB00] w-full">
-        <ContinuousScroll speed={200}  pauseOnHover items={["We are enabling founders to build boldy; build better and build for tomorrow."] } />
+        <ContinuousScroll speed={50}  pauseOnHover items={["We are enabling founders to build boldy; build better and build for tomorrow."] } />
       </div>
       <Statistics />
       <WhyWeExist />
