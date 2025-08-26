@@ -33,8 +33,8 @@ export async function POST(request: NextRequest) {
 
         const data = await mailchimp.lists.addListMember(audienceId, {
             email_address: email,
-            status: "pending",
-            merge_fields: { FULLNAME: fullName ?? "" ,COMPANY:companyName??""},
+            status: "subscribed",
+            merge_fields: { FULLNAME: fullName ?? "" ,COMPANY:companyName??"",EMAIL:email},
         });
 
         return NextResponse.json({ success: true, data });
