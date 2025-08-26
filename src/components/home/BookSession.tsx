@@ -38,11 +38,11 @@ const BookSession = () => {
                 </li>
               ))}
             </ul>
-            <div className="flex gap-5">
+            <div className="flex flex-col gap-5 md:flex-row">
               <Link
                 target="_blank"
                 href="https://calendly.com/thefirstfounders/60min"
-                className="bg-[#040404] text-lg font-bold mt-10 items-center py-3.5 px-5 w-fit text-white rounded-full flex gap-2"
+                className="bg-[#040404] text-lg font-bold items-center py-3.5 px-5 w-fit text-white rounded-full flex gap-2"
               >
                 <span>Book A Clarity Session</span>
                 <Icon
@@ -53,7 +53,7 @@ const BookSession = () => {
               </Link>
               <Link
                 href="/launchpad"
-                className="bg-transparent border-[1.1px] border-[#666666] text-lg font-bold mt-10 items-center py-3.5 px-5 w-fit rounded-full flex gap-2"
+                className="bg-transparent border-[1.1px] border-[#666666] text-lg font-bold items-center py-3.5 px-5 w-fit rounded-full flex gap-2"
               >
                 <span>Learn More</span>
                 <Icon
