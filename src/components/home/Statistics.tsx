@@ -12,6 +12,7 @@ const stats = [
   { number: "$1M+", label: "Invested", color: "bg-yellow-400" },
   { number: "6.5x", label: "MOIC", color: "bg-teal-400" },
   { number: "50%", label: "YOY Growth", color: "bg-yellow-400" },
+  { number: "60+", label: "Job Created", color: "bg-yellow-400" },
 ];
 const Statistics = () => {
   return (

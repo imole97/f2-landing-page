@@ -70,6 +70,7 @@ const Footer = () => {
           <div className="flex gap-4 flex-col">
             <p className="font-medium text-xl">Company</p>
             <p>Newsroom</p>
+            {/* <Link target="_blank" href="/contact">Contact Us</Link> */}
             <Link target="_blank" href="https://calendly.com/thefirstfounders/60min">Contact Us</Link>
           </div>
           <div className="flex w-fit gap-4 flex-col">

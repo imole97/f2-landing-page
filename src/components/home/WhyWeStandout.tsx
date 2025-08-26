@@ -37,6 +37,12 @@ const items = [
     content:
       "Our integrated ecosystem collective and subunits create a holistic support system fostering continuous learning, value creation and a powerful community.",
   },
+  {
+    img: "/images/resize.png",
+    title: "Scalable Technology & Infrastructure",
+    content:
+      "Access to shared resources reduces costs and accelerates go-to-market.",
+  },
 ];
 const WhyWeStandout = () => {
   return (
@@ -55,9 +61,9 @@ const WhyWeStandout = () => {
             Our unique value proposition is built on distinct differentiators:
           </p>
         </div>
-        <div className=" md:grid grid-cols-6 gap-5">
+        <div className="grid md:grid-cols-3 mt-10 gap-5">
           {items.map((item) => (
-            <div key={item.title} className={`${item.gridStyle} space-y-4 p-5`}>
+            <div key={item.title} className={`space-y-4 p-5`}>
               <CustomImage
                 alt="images"
                 src={item.img}

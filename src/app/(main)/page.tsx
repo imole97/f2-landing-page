@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import ContinuousScroll from "@/components/ContinuousScroll";
 import AsSeenOn from "@/components/home/AsSeenOn";
 import AwardRecognition from "@/components/home/AwardRecognition";
@@ -21,15 +21,21 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 export default function Home() {
-  const [showdownload, setShowdownload] = useState(false)
-    useEffect(() => {
-  setShowdownload(true)
-    },[])
+  const [showdownload, setShowdownload] = useState(false);
+  useEffect(() => {
+    setShowdownload(true);
+  }, []);
   return (
     <>
       <HeroSection />
       <div className="bg-[#0D102F]  border-t-2 border-[#FFBB00] w-full">
-        <ContinuousScroll speed={200}  pauseOnHover items={["We are enabling founders to build boldy; build better and build for tomorrow."] } />
+        <ContinuousScroll
+          speed={50}
+          pauseOnHover
+          items={[
+            "We are enabling founders to build boldy; build better and build for tomorrow.",
+          ]}
+        />
       </div>
       <Statistics />
       <WhyWeExist />
@@ -43,10 +49,15 @@ export default function Home() {
       <AsSeenOn />
       <Partners />
       <PortfolioInvestors />
-      <AwardRecognition/>
+      <AwardRecognition />
       <Testimonial />
       <FAQ />
-         {showdownload ? <DownloadModal isOpen={ showdownload} onClose={()=>setShowdownload(false)} />:null}
+      {showdownload ? (
+        <DownloadModal
+          isOpen={showdownload}
+          onClose={() => setShowdownload(false)}
+        />
+      ) : null}
     </>
   );
 }

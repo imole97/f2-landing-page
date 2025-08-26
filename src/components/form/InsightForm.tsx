@@ -1,8 +1,9 @@
 import { useSubscribe } from "@/hooks/useSubscribe";
 import { useEffect, useState } from "react";
 import ThankYouModal from "../modals/ThankYouModal";
+import { cn } from "@/lib/utils";
 
-export default function InsightReportForm() {
+export default function InsightReportForm({className}:{className?:string}) {
   const { subscribe, loading, setSuccess ,error, success } = useSubscribe();
   const [fullName, setFullName] = useState("");
   const [companyName, setCompanyName] = useState("");
@@ -27,7 +28,7 @@ const handleSubmit = async (e: InsightReportFormEvent) => {
   return (
    
     //   <div className="w-full">
-        <div className="bg-white max-w-[576px] rounded-2xl shadow-lg border border-gray-200 p-8">
+        <div className={cn("bg-white max-w-[576px] rounded-2xl shadow-lg border border-gray-200 p-8",className)}>
           <div className="mb-8">
             <h1 className="text-2xl font-bold text-gray-900 mb-2">Download Insight Report</h1>
           </div>
