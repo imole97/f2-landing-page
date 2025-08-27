@@ -95,6 +95,34 @@ export const expertiseExtra = [
     },
 ];
 
+export const whyUniBuilder = [
+    {
+        img: "/images/startup.png",
+        aspect: "aspect-[80/80]",
+        label: "Venture-Building Support",
+        content: "take your idea from concept to execution."
+    },
+    {
+        img: "/images/g599.png",
+        aspect: "aspect-[80/80]",
+        label: "Mentorship & Networking",
+        content: "connect with industry leaders, peers, and experts."
+    },
+    {
+        img: "/images/money-bag.png",
+        aspect: "aspect-[80/80]",
+        label: "Business Launch Resources",
+        content: "toolkits, materials, and guidance to kickstart your venture."
+    },
+    {
+        img: "/images/startup1.png",
+        aspect: "aspect-[80/80]",
+        label: "Access to Funding",
+        content: "opportunities to secure investment for your startup."
+    },
+
+]
+
 export const guidanceItems = [
     {
         title: "Clarity Sessions & Ideation:",
@@ -224,7 +252,7 @@ export const successStories = [
     {
         id: 2,
         img: "/images/aavenu-white.png",
-        company:"Aavenu",
+        company: "Aavenu",
         aspect: "aspect-[324/64]",
         website: "www.aavenu.com",
         description: "Aavenu is an innovative platform that blends virtual simulations with real-world event booking and design.",

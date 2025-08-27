@@ -21,14 +21,14 @@ const ContinuousScroll: React.FC<TProps> = ({
   pauseOnHover,
 }) => {
   // Duplicate the array *once* for seamless looping
-  const duplicatedItems = [...items, ...items];
+  const duplicatedItems = [...items, ...items, ...items];
 
   return (
     <>
       <style jsx>{`
         @keyframes scroll {
           0% {
-            transform: translateX(0);
+            transform: translateX(5%);
           }
           100% {
             transform: translateX(-50%);
@@ -68,7 +68,7 @@ const ContinuousScroll: React.FC<TProps> = ({
               )}
             >
               {typeof item === "string" ? (
-                <p className="text-4xl lg:text-5xl">{item}</p>
+                <p className="text-4xl font-medium lg:text-5xl">{item}</p>
               ) : (
                 <CustomImage
                   className={cn(item.aspect || "", imageClassName)}

@@ -38,7 +38,7 @@ const navHeaders = [
     subMenu: [
       { title: " F2Nation", route: "" },
       { title: "African Ecosystem Mixer", route: "" },
-      { title: "Unibuilder", route: "" },
+      { title: "Unibuilder", route: "/uni-builder" },
       { title: "F2 Academy", route: "" },
     ],
   },
