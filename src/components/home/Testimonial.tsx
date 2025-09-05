@@ -29,12 +29,11 @@ const testimonials = [
     text: "Partnering with an organization that shares our passion for supporting the growth of startups is a wholesome one, and that is how we describe our partnership with FirstFounders. FirstFounders commitment to providing an enabling environment for early stage startups is highly commendable.",
     avatar: "HO",
   },
- 
 ];
 const Testimonial = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const canGoNext = currentIndex < testimonials.length+5 ;
+  const canGoNext = currentIndex < testimonials.length + 5;
   const canGoPrev = currentIndex > 0;
 
   const nextTestimonial = () => {
@@ -67,74 +66,88 @@ const Testimonial = () => {
 
       {/* testimonial cards */}
       <Container className="relative">
-          <div className="overflow-x-auto no-scrollbar">
-            <div 
-              className="flex transition-transform duration-500 ease-in-out gap-6"
-              style={{
-                transform: `translateX(-${currentIndex * (100/3)}%)`,
-                // width: `${(testimonials.length / 3) * 100}%`
-              }}
-            >
-              {testimonials.map((testimonial, index) => (
-                <div
-                  key={testimonial.id}
-                  className="bg-white rounded-2xl w-full max-w-[600px] p-8 shadow-sm border border-gray-100 flex-shrink-0"
-                  // style={{ width: `${100/testimonials.length}%` }}
-                >
-                  <div className="mb-6">
-                    <p className="text-[#333333] font-medium leading-relaxed text-base">
-                      {testimonial.text}
-                    </p>
-                  </div>
-                  
-                  <div className="flex items-center gap-4">
-                    {testimonial.image ? <CustomImage src={ testimonial.image} alt={testimonial.image} imgClassname="rounded-full" className="aspect-[48/48] w-[48px] h-[48px]" /> :
+        <div className="overflow-x-auto no-scrollbar">
+          <div
+            className="flex transition-transform duration-500 ease-in-out gap-6"
+            style={{
+              transform: `translateX(-${currentIndex * (100 / 3)}%)`,
+            }}
+          >
+            {testimonials.map((testimonial, index) => (
+              <div
+                key={testimonial.id}
+                className="bg-white rounded-2xl w-full max-w-[600px] p-8 shadow-sm border border-gray-100 flex-shrink-0"
+                // style={{ width: `${100/testimonials.length}%` }}
+              >
+                <div className="mb-6">
+                  <p className="text-[#333333] font-medium leading-relaxed text-base">
+                    {testimonial.text}
+                  </p>
+                </div>
+
+                <div className="flex items-center gap-4">
+                  {testimonial.image ? (
+                    <CustomImage
+                      src={testimonial.image}
+                      alt={testimonial.image}
+                      imgClassname="rounded-full"
+                      className="aspect-[48/48] w-[48px] h-[48px]"
+                    />
+                  ) : (
                     <div className="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center text-white font-semibold text-sm">
                       {testimonial.avatar}
                     </div>
-                    }
-                    <div>
-                      <h4 className="font-semibold text-gray-900 text-lg">
-                        {testimonial.name}
-                      </h4>
-                      <p className="text-gray-600 text-sm">
-                        {testimonial.role}
-                      </p>
-                    </div>
+                  )}
+                  <div>
+                    <h4 className="font-semibold text-gray-900 text-lg">
+                      {testimonial.name}
+                    </h4>
+                    <p className="text-gray-600 text-sm">{testimonial.role}</p>
                   </div>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
+        </div>
       </Container>
-      
+
       {/* nav button */}
       <div className="flex justify-center gap-4 mt-12">
-          <button
-            onClick={prevTestimonial}
-            disabled={!canGoPrev}
-            className={`w-20 h-14 rounded-[70px] border-2 flex items-center justify-center transition-all duration-200 ${
-              canGoPrev 
-                ? 'border-cyan-400 hover:border-cyan-400 hover:text-cyan-500 cursor-pointer' 
-                : 'border-gray-200 text-gray-300 cursor-not-allowed'
-            }`}
-            aria-label="Previous testimonial"
-          >
-         <Icon icon="material-symbols:arrow-left-alt-rounded" className={`${canGoPrev?"text-[#33CCCC]":"text-gray-300"}`} width="24" height="24" />
-          </button>
-          <button
-            onClick={nextTestimonial}
-            disabled={!canGoNext}
-            className={`w-20 h-14 rounded-[70px] border-2 flex items-center justify-center transition-all duration-200 ${
-              canGoNext 
-                ? 'border-cyan-400 text-cyan-500  hover:text-white cursor-pointer' 
-                : 'border-gray-200 text-gray-300 cursor-not-allowed'
-            }`}
-            aria-label="Next testimonial"
-          >
-          <Icon icon="material-symbols:arrow-right-alt-rounded" className={`${canGoNext?"text-[#33CCCC]":"text-gray-300"}`} width="24" height="24" />
-          </button>
-        </div>
+        <button
+          onClick={prevTestimonial}
+          disabled={!canGoPrev}
+          className={`w-20 h-14 rounded-[70px] border-2 flex items-center justify-center transition-all duration-200 ${
+            canGoPrev
+              ? "border-cyan-400 hover:border-cyan-400 hover:text-cyan-500 cursor-pointer"
+              : "border-gray-200 text-gray-300 cursor-not-allowed"
+          }`}
+          aria-label="Previous testimonial"
+        >
+          <Icon
+            icon="material-symbols:arrow-left-alt-rounded"
+            className={`${canGoPrev ? "text-[#33CCCC]" : "text-gray-300"}`}
+            width="24"
+            height="24"
+          />
+        </button>
+        <button
+          onClick={nextTestimonial}
+          disabled={!canGoNext}
+          className={`w-20 h-14 rounded-[70px] border-2 flex items-center justify-center transition-all duration-200 ${
+            canGoNext
+              ? "border-cyan-400 text-cyan-500  hover:text-white cursor-pointer"
+              : "border-gray-200 text-gray-300 cursor-not-allowed"
+          }`}
+          aria-label="Next testimonial"
+        >
+          <Icon
+            icon="material-symbols:arrow-right-alt-rounded"
+            className={`${canGoNext ? "text-[#33CCCC]" : "text-gray-300"}`}
+            width="24"
+            height="24"
+          />
+        </button>
+      </div>
     </div>
   );
 };

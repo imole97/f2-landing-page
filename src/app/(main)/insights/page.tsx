@@ -1,14 +1,11 @@
 "use client";
 
 import InsightReportForm from "@/components/form/InsightForm";
-import DownloadModal from "@/components/modals/DownloadModal";
 import CustomImage from "@/components/ui/CustomImages";
-import Link from "next/link";
 import React, { useState } from "react";
 
 const Insights = () => {
   const [showForm, setShowForm] = useState(false);
-  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <section className=" bg-[#0D102F] w-full py-[150px] px-[5%]">
@@ -40,13 +37,14 @@ const Insights = () => {
             </>
           )}
         </div>
-
-        <CustomImage
-          className="aspect-[652/671] w-full"
-          src="/images/venture-book.png"
-          alt="book"
-          imgClassname="rounded-[20px]"
-        />
+        <div className="w-full">
+          <CustomImage
+            className="aspect-[652/671] w-full"
+            src="/images/venture-book.png"
+            alt="book"
+            imgClassname="rounded-[20px]"
+          />
+        </div>
       </div>
     </section>
   );

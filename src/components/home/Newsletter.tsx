@@ -26,7 +26,7 @@ const Newsletter = () => {
     <div className="bg-white">
       <Container>
         <div className="flex flex-col gap-10 justify-center sm:flex-row">
-          {content.map((item) => (
+          {content.map((item, i) => (
             <div
               key={item.header}
               className="rounded-[20px]  min-w-0 flex-1 first:bg-[#EBECF9] bg-[#EBFAFA] p-10"

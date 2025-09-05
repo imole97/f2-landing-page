@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Container from "../layout/Container";
 import CustomImage from "../ui/CustomImages";
@@ -58,7 +59,7 @@ const team = [
     title: "Senior Research & Data Analyst",
     twitter: "https://x.com/yusufyaru",
     aspect: "aspect-[412/440]",
-    style:"md:col-start-2",
+    style: "md:col-start-2",
     linkedIn: "https://www.linkedin.com/in/yusuf-umaru",
   },
 ];
@@ -76,7 +77,7 @@ const OurTeam = () => {
           founders to build for tomorrow
         </h4>
         <div className="grid grid-cols-1 w-full sm:grid-cols-2 gap-6  md:grid-cols-3">
-          {team.map((item) => (
+          {team.map((item, i) => (
             <div
               key={item.name}
               className={`rounded-[20px] relative  overflow-hidden ${item.style}`}

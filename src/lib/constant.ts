@@ -83,15 +83,24 @@ export const expertiseExtra = [
     {
         img: "/images/training.png",
         label: "Immersive Training",
+        style: "md:row-star-1 md:col-start-1",
         aspect: "aspect-[80/80]",
         content: "Kickstart your journey with an intensive 2-week training period.",
     },
     {
         img: "/images/support.png",
+        style: "md:row-start-2 md:col-start-1",
         label: "Dedicated Venture Studio Support",
         aspect: "aspect-[80/80]",
         content:
             "Benefit from 4 to 9 months of hands-on support from our experienced venture studio team.",
+    },
+    {
+        img: "/images/org-chart1.png",
+        style: "md:col-start-2 md:row-span-2",
+        label: "Structured Guidance",
+        aspect: "aspect-[80/80]",
+        content: "Navigate the complexities of venture building with our framework, covering everything from ideation and product development to fundraising and legal basics.",
     },
 ];
 
@@ -313,3 +322,121 @@ export const successStories = [
         color: "bg-green-900"
     }
 ];
+
+// Venture Lab Program Modules data
+export const ventureLabModules = [
+    {
+        title: "Ideation for Digital Entrepreneurship",
+        description:
+            "Learn to identify market gaps and validate your ideas.",
+    },
+    {
+        title: "Market Research and Validation",
+        description:
+            "Understand your target market with data-driven research.",
+    },
+    {
+        title: "Understanding AI Ventures",
+        description:
+            "Get a foundational grasp of building a business with artificial intelligence.",
+    },
+    {
+        title: "Product Development",
+        description:
+            "Master the process of building an MVP and achieving product-market fit.",
+    },
+    {
+        title: "Leadership and Team Building",
+        description:
+            "Develop the skills to lead a high-performing team.",
+    },
+    {
+        title: "Customer Acquisition Strategies",
+        description: "Find and acquire your first customers.",
+    },
+    {
+        title: "Legal Basics for Startups",
+        description:
+            "Protect your business with essential legal knowledge.",
+    },
+    {
+        title: "Pitch Deck Development and Practice",
+        description: "Craft and deliver a compelling pitch.",
+    },
+    {
+        title: "Financial Management for Startups",
+        description:
+            "Understand financial planning and fundraising basics.",
+    },
+    {
+        title: "Business Operations",
+        description:
+            "Focus on the practical, day-to-day operations of a scalable tech business.",
+    },
+];
+
+// Program Details (Ideation - MVP) for Launchpad section
+export const programDetails = {
+    title: "Ideation - MVP",
+    summary: "A 10-month journey to turn your idea into a high-growth business.",
+    investmentLabel: "Investment",
+    investment: "$20,000",
+    whatYouGetTitle: "What You Get:",
+    features: [
+        "A high-growth idea, pitch deck, and financial model.",
+        "Branding (logo and brand wheel).",
+        "Product Requirement Document and UI/UX design.",
+        "A Minimum Viable Product (MVP) with 5 core features.",
+        "Venture studio team support for 10 months.",
+        "Hiring, user acquisition, and grant application support.",
+        "Investor introductions.",
+        "Dataroom setup and 2 months of free legal service.",
+    ],
+    cta: {
+        label: "Get Started",
+        href: "#",
+    },
+};
+
+// Program Schedule timeline data for Launchpad page
+export const programSchedule = {
+    heading: "Program Schedule",
+    start: {
+        label: "Application Opens",
+        date: "September 15th, 2025",
+    },
+    steps: [
+        {
+            label: "Application Closes",
+            date: "October 25th, 2025",
+        },
+        {
+            label: "Venture Lab Program Starts:",
+            date: "November 1st, 2025",
+        },
+        {
+            label: "Ideation/Market Validation",
+            date: "December 1st - 15th, 2025",
+        },
+        {
+            label: "Product UI/UX",
+            date: "Jan 3rd - 31st, 2026",
+        },
+        {
+            label: "Product Engineering:",
+            date: "Feb 1st - April 30th, 2026",
+        },
+        {
+            label: "Product Launch/Go-To-Market/User Acquisition",
+            date: "May - July, 2026",
+        },
+        {
+            label: "Revenue Stage/Intro To Investors",
+            date: "August 2026",
+        },
+    ],
+    end: {
+        label: "Program Ends",
+        date: "September 10th, 2026",
+    },
+};

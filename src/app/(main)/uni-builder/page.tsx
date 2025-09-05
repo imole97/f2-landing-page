@@ -1,3 +1,4 @@
+"use client";
 import ContinuousScroll from "@/components/ContinuousScroll";
 import Container from "@/components/layout/Container";
 import CustomImage from "@/components/ui/CustomImages";
@@ -23,34 +24,40 @@ const Unibuilder = () => {
               startup.
             </p>
             <div className="flex justify-center mt-5">
-              <Link
-                target="_blank"
-                href="https://bit.ly/unibuilderbridgeforbillions"
-                className="bg-[#FFBB00] text-[#0D102F] font-bold mt-10 items-center py-3.5 px-5 w-fit rounded-full flex gap-2"
-              >
-                <span>Apply Now</span>
-                <Icon
-                  icon="material-symbols:arrow-forward-rounded"
-                  width="16"
-                  height="16"
-                />
-              </Link>
+              <div>
+                <Link
+                  target="_blank"
+                  href="https://bit.ly/unibuilderbridgeforbillions"
+                  className="bg-[#FFBB00] text-[#0D102F] font-bold mt-10 items-center py-3.5 px-5 w-fit rounded-full flex gap-2"
+                >
+                  <span>Apply Now</span>
+                  <Icon
+                    icon="material-symbols:arrow-forward-rounded"
+                    width="16"
+                    height="16"
+                  />
+                </Link>
+              </div>
             </div>
             <div className="flex flex-col text-2xl gap-2 justify-center mt-10 items-center md:flex-row">
               <p>Our Partners:</p>
-              <CustomImage
-                src="/images/bridge.png"
-                alt="bridge-for-billions-image"
-                className="aspect-[212/42] max-w-[212px] h-[42px] md:aspect-[313/64] md:max-w-[313px] md:h-[64px]"
-              />
+              <div>
+                <CustomImage
+                  src="/images/bridge.png"
+                  alt="bridge-for-billions-image"
+                  className="aspect-[212/42] max-w-[212px] h-[42px] md:aspect-[313/64] md:max-w-[313px] md:h-[64px]"
+                />
+              </div>
             </div>
             <div className="mt-10 ">
-              <CustomImage
-                src="/images/uni-builder.jpg"
-                alt="bridge-for-billions-image"
-                imgClassname="rounded-[20px]"
-                className="aspect-[1280/520] w-full h-full"
-              />
+              <div>
+                <CustomImage
+                  src="/images/uni-builder.jpg"
+                  alt="bridge-for-billions-image"
+                  imgClassname="rounded-[20px]"
+                  className="aspect-[1280/520] w-full h-full"
+                />
+              </div>
             </div>
           </div>
         </Container>
@@ -69,7 +76,7 @@ const Unibuilder = () => {
           Why Join UniBuilder?
         </h4>
         <Container className="grid grid-cols-1 py-10 gap-6 sm:grid-cols-2">
-          {whyUniBuilder.map((item) => (
+          {whyUniBuilder.map((item, i) => (
             <div
               key={item.label}
               className="bg-[#EBFAFA] flex flex-col md:flex-row gap-10 p-10 rounded-lg"
@@ -92,12 +99,14 @@ const Unibuilder = () => {
       <section className="bg-white py-10">
         <Container>
           <div className="bg-[#0D102F] grid gap-15 lg:grid-cols-2 rounded-[60px] p-10">
-            <CustomImage
-              imgClassname="rounded-[20px]"
-              src="/images/group-uni.jpg"
-              alt="group-uni"
-              className="aspect-[548/473]"
-            />
+            <div>
+              <CustomImage
+                imgClassname="rounded-[20px]"
+                src="/images/group-uni.jpg"
+                alt="group-uni"
+                className="aspect-[548/473]"
+              />
+            </div>
             <div className="flex min-w-0 text-base sm:text-xl md:text-3xl font-medium space-y-5 text-white flex-col">
               <p className="text-2xl md:text-5xl font-bold">
                 Who Should Apply?
@@ -157,12 +166,14 @@ const Unibuilder = () => {
               </Link>
             </div>
           </div>
-          <CustomImage
-            imgClassname="rounded-[20px]"
-            src="/images/mentor.jpg"
-            alt="mentor"
-            className="aspect-[630/502]"
-          />
+          <div>
+            <CustomImage
+              imgClassname="rounded-[20px]"
+              src="/images/mentor.jpg"
+              alt="mentor"
+              className="aspect-[630/502]"
+            />
+          </div>
         </Container>
       </section>
     </>

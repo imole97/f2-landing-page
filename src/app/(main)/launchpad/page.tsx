@@ -1,15 +1,11 @@
-import ContinuousScroll from "@/components/ContinuousScroll";
 import ContinuousSlider from "@/components/launchpad/ContinuousSlider";
+import VentureLabModules from "@/components/launchpad/VentureLabModules";
+import ProgramDetails from "@/components/launchpad/ProgramDetails";
+import ProgramSchedule from "@/components/launchpad/ProgramSchedule";
+import LeapCTA from "@/components/launchpad/LeapCTA";
 import Container from "@/components/layout/Container";
 import CustomImage from "@/components/ui/CustomImages";
-import {
-  cohorts,
-  expertiseExtra,
-  forWho,
-  guidanceItems,
-  offering,
-  tiers,
-} from "@/lib/constant";
+import { expertiseExtra, forWho, offering } from "@/lib/constant";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import Link from "next/link";
 import React from "react";
@@ -113,12 +109,16 @@ const LaunchPad = () => {
       </section>
       <section className="bg-white py-20 text-[#040404]">
         <h4 className="text-center font-medium text-3xl">What To Expect</h4>
+        <p className="text-center max-w-[800px] mx-auto text-base md:text-lg text-gray-600 mt-2">
+          The F2-Launchpad is a comprehensive program designed for serious
+          individuals committed to building successful ventures.
+        </p>
         <Container className="">
           <div className="grid grid-cols-1 py-10 gap-6 md:grid-cols-2">
             {expertiseExtra.map((item) => (
               <div
                 key={item.label}
-                className="bg-[#EBFAFA] flex flex-col md:flex-row gap-10 p-10 rounded-lg"
+                className={`bg-[#EBFAFA] ${item.style} last:flex-col  flex flex-col md:flex-row gap-10 p-10 rounded-lg`}
               >
                 <div className="">
                   <CustomImage
@@ -134,42 +134,10 @@ const LaunchPad = () => {
               </div>
             ))}
           </div>
-          <div className="col-span-2 bg-[#EBFAFA] p-10 rounded-lg flex flex-col md:flex-row">
-            <CustomImage
-              src={"/images/org-chart1.png"}
-              alt={"org-chart"}
-              className={`aspect-[80/80] w-20 h-20`}
-            />
-            <div className="">
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
-                Structured Guidance:
-              </h2>
-              <p className="text-gray-700 text-lg mb-6">
-                Navigate the complexities of venture building with our
-                comprehensive framework covering:
-              </p>
-
-              {/* Guidance Items List */}
-              <div className="space-y-4">
-                {guidanceItems.map((item, index) => (
-                  <div key={index} className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-gray-900 rounded-full mt-2.5 flex-shrink-0"></div>
-                    <div>
-                      <span className="font-bold text-gray-900">
-                        {item.title}
-                      </span>
-                      <span className="text-gray-700 ml-1">
-                        {item.description}
-                      </span>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
         </Container>
       </section>
-      <section className="bg-white w-full py-20 text-[#040404]">
+
+      {/* <section className="bg-white w-full py-20 text-[#040404]">
         <h4 className="text-center text-4xl font-medium mb-12">
           Choose the Program That Fits Your Needs
         </h4>
@@ -184,17 +152,16 @@ const LaunchPad = () => {
                     : "border border-gray-200"
                 }`}
               >
-                {/* Recommended Badge */}
+             
                 {tier.isRecommended && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <div className="bg-yellow-400 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-1">
                       <span className="text-lg">🎉</span>
-                      Recommended
+                      <span>Recommended</span>
                     </div>
                   </div>
                 )}
 
-                {/* Header */}
                 <div className="mb-8">
                   <h3 className="text-xl font-bold text-gray-900 mb-4">
                     {tier.title}
@@ -212,7 +179,6 @@ const LaunchPad = () => {
                   </p>
                 </div>
 
-                {/* Get Started Button */}
                 <div className="mb-8">
                   <button className="w-full bg-black text-white py-4 px-6 rounded-full font-semibold text-base hover:bg-gray-800 transition-colors flex items-center justify-center gap-2">
                     {tier.buttonText}
@@ -220,10 +186,9 @@ const LaunchPad = () => {
                   </button>
                 </div>
 
-                {/* Features List */}
                 <div className="space-y-3">
-                  {tier.features.map((feature, featureIndex) => (
-                    <div key={featureIndex} className="flex items-start gap-3">
+                  {tier.features.map((feature) => (
+                    <div key={feature} className="flex items-start gap-3">
                       <div className="w-1.5 h-1.5 bg-gray-400 rounded-full mt-2 flex-shrink-0"></div>
                       <span className="text-gray-700 text-sm leading-relaxed">
                         {feature}
@@ -235,8 +200,8 @@ const LaunchPad = () => {
             ))}
           </div>
         </Container>
-      </section>
-      <section className="bg-white py-10 text-[#040404]">
+      </section> */}
+      {/* <section className="bg-white py-10 text-[#040404]">
         <h4 className="text-center text-4xl font-medium mb-12">
           Our Cohort Schedule
         </h4>
@@ -247,17 +212,14 @@ const LaunchPad = () => {
                 key={cohort.id}
                 className={`${cohort.backgroundColor} rounded-3xl p-12 w-full text-left`}
               >
-                {/* Cohort Title */}
                 <h3 className="text-3xl md:text-4xl font-medium text-black mb-4">
                   {cohort.title}
                 </h3>
 
-                {/* Period */}
                 <p className="text-lg md:text-xl text-gray-800 mb-8 font-medium">
                   {cohort.period}
                 </p>
 
-                {/* Apply Button */}
                 <button className="bg-black text-white px-8 py-4 rounded-full font-semibold text-base hover:bg-gray-800 transition-colors flex items-center gap-2">
                   {cohort.buttonText}
                   <span className="text-lg">→</span>
@@ -266,10 +228,19 @@ const LaunchPad = () => {
             ))}
           </div>
         </Container>
+      </section> */}
+      <section className="bg-white text-[#040404]">
+        <ContinuousSlider />
       </section>
-      <section className="bg-white py-10 text-[#040404]">
-        <ContinuousSlider/>
-      </section>
+      {/* Venture Lab Program Modules Section */}
+      <VentureLabModules />
+      {/* Program Details Section */}
+      <ProgramDetails />
+
+      {/* Program Schedule Section */}
+      <ProgramSchedule />
+      {/* Ready to take the leap CTA */}
+      <LeapCTA />
     </>
   );
 };

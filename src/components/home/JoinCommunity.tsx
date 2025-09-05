@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Container from "../layout/Container";
 import { Icon } from "@iconify/react/dist/iconify.js";
@@ -35,7 +36,7 @@ const JoinCommunity = () => {
               />
             </button>
           </div>
-          {community.map((item) => (
+          {community.map((item, i) => (
             <div key={item.img} className="relative">
               <CustomImage
                 alt="community-img"

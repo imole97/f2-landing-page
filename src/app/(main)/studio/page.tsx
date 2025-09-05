@@ -1,3 +1,4 @@
+"use client";
 import Container from "@/components/layout/Container";
 import CustomImage from "@/components/ui/CustomImages";
 import { Icon } from "@iconify/react/dist/iconify.js";
@@ -120,9 +121,9 @@ const Studio = () => {
           <div className="bg-[#EBFAFA] p-3 rounded-xl flex flex-col gap-10 items-center md:flex-row">
             <div className="bg-[#0D102F] w-full  px-5 py-6 md:px-10 md:py-12 text-2xl sm:text-3xl md:text-5xl lg:text-7xl rounded-xl ">
               <p>
-                Built By Builders,
-                <span className="text-[#FFBB00]">For Builders.</span>
-                Since 2020.
+                Built By Builders,{" "}
+                <span className="text-[#FFBB00]">For Builders.</span> Since
+                2020.
               </p>
             </div>
             <div className="w-full text-xl md:text-2xl lg:text-3xl text-[#040404]">
@@ -143,7 +144,7 @@ const Studio = () => {
           Consider us your extended founding team, providing expertise in:
         </p>
         <Container className="grid grid-cols-1 py-10 gap-6 sm:grid-cols-2">
-          {expertise.map((item) => (
+          {expertise.map((item, i) => (
             <div
               key={item.label}
               className="bg-[#EBFAFA] flex flex-col md:flex-row gap-10 p-10 rounded-lg"
@@ -169,7 +170,7 @@ const Studio = () => {
         </h4>
         <Container className="">
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-            {edge.map((item) => (
+            {edge.map((item, i) => (
               <div
                 key={item.label}
                 className="flex p-5 gap-3 lg:p-10  h-fit flex-col bg-[#FFFFFF1A] rounded-2xl"
@@ -195,12 +196,14 @@ const Studio = () => {
       <section className="bg-white py-20 text-[#040404]">
         <Container>
           <div className="bg-[#EBECF9] grid gap-15 lg:grid-cols-2 rounded-[60px] p-10">
-            <CustomImage
-              imgClassname="rounded-[20px]"
-              src="/images/boss.jpg"
-              alt="ceo"
-              className="aspect-[548/473]"
-            />
+            <div>
+              <CustomImage
+                imgClassname="rounded-[20px]"
+                src="/images/boss.jpg"
+                alt="ceo"
+                className="aspect-[548/473]"
+              />
+            </div>
             <div className="flex min-w-0 space-y-5 flex-col">
               <p className="text-5xl lg:text-6xl font-bold text-[#040404]">
                 Ready To Build Your Audacious AI-First Venture With Us?

@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import CustomImage from "../ui/CustomImages";
 import Container from "../layout/Container";
@@ -62,7 +63,7 @@ const WhyWeStandout = () => {
           </p>
         </div>
         <div className="grid md:grid-cols-3 mt-10 gap-5">
-          {items.map((item) => (
+          {items.map((item, i) => (
             <div key={item.title} className={`space-y-4 p-5`}>
               <CustomImage
                 alt="images"
