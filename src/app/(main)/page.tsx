@@ -51,12 +51,12 @@ export default function Home() {
       <AwardRecognition />
       <Testimonial />
       <Faq />
-      {/* {showdownload ? (
+      {showdownload ? (
         <DownloadModal
           isOpen={showdownload}
           onClose={() => setShowdownload(false)}
         />
-      ) : null} */}
+      ) : null}
     </>
   );
 }
