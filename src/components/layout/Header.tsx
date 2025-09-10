@@ -28,6 +28,7 @@ const navHeaders = [
     route: "",
     subMenu: [
       { title: "F2-Venture Studio Program", route: "" },
+      { title: "F2-Venture Launchpad", route: "/launchpad" },
       { title: "F2-Venture Acceleration Program", route: "" },
     ],
   },

@@ -37,7 +37,7 @@ const LeapCTA = () => {
                   Book Clarity Session
                 </Link>
                 <Link
-                  href="#apply"
+                  href="/launchpad/apply"
                   className="bg-white/90 text-[#0D102F] font-semibold px-6 py-3 sm:px-8 sm:py-4 rounded-full"
                 >
                   Apply Now

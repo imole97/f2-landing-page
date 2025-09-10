@@ -1,13 +1,10 @@
-'use client'
+"use client";
+import { Analytics } from "@vercel/analytics/next";
 import type { Metadata } from "next";
 import "./globals.css";
 import { satoshi } from "@/config/font";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
 import { useEffect, useState } from "react";
 import { Icon } from "@iconify/react/dist/iconify.js";
-
-
 
 // export const metadata: Metadata = {
 //   title: "Create Next App",
@@ -21,27 +18,24 @@ export default function RootLayout({
 }>) {
   const [showBackToTop, setShowBackToTop] = useState(false);
 
-
   useEffect(() => {
     const handleScroll = () => {
       setShowBackToTop(window.scrollY > 300);
-      
-      // // Update active section based on scroll posi
+
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
   return (
     <html suppressHydrationWarning lang="en">
-      <body
-        className={`${satoshi.variable} antialiased min-h-screen`}
-      >
-       {children}
+      <body className={`${satoshi.variable} antialiased min-h-screen`}>
+        {children}
+        <Analytics />
       </body>
     </html>
   );

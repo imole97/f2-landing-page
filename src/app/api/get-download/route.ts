@@ -15,7 +15,7 @@ export async function POST(request: NextRequest) {
             return NextResponse.json({ error: "Valid email is required." }, { status: 400 });
         }
 
-        const audienceId = process.env.MAILCHIMP_AUDIENCE_ID;
+        const audienceId = process.env.DOWNLOAD_AUDIENCE_ID;
         if (!audienceId) {
             return NextResponse.json({ error: "Audience ID not configured." }, { status: 500 });
         }

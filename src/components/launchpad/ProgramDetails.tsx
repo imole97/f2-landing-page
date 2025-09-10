@@ -2,17 +2,18 @@ import Container from "@/components/layout/Container";
 import React from "react";
 import { programDetails } from "@/lib/constant";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 // Light grid background utility using inline style to avoid adding global CSS
 const GridCard: React.FC<React.PropsWithChildren<{ className?: string }>> = ({
   className = "",
   children,
 }) => {
-//   const bg = {
-//     backgroundImage:
-//       "linear-gradient(to right, rgba(0,0,0,0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(0,0,0,0.05) 1px, transparent 1px)",
-//     backgroundSize: "32px 32px",
-//   } as React.CSSProperties;
+  //   const bg = {
+  //     backgroundImage:
+  //       "linear-gradient(to right, rgba(0,0,0,0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(0,0,0,0.05) 1px, transparent 1px)",
+  //     backgroundSize: "32px 32px",
+  //   } as React.CSSProperties;
   return (
     <div
       className={cn(`rounded-2xl bg-[#E9F8F3] p-8`, className)}
@@ -66,10 +67,13 @@ const ProgramDetails = () => {
               ))}
             </ul>
 
-            <button className="mt-8 w-full rounded-full bg-black text-white px-8 py-4 font-semibold flex items-center justify-center gap-2">
+            <Link
+              href="/launchpad/apply"
+              className="mt-8 w-full rounded-full bg-black text-white px-8 py-4 font-semibold flex items-center justify-center gap-2"
+            >
               {programDetails.cta.label}
               <span className="text-lg">→</span>
-            </button>
+            </Link>
           </div>
         </div>
       </Container>
