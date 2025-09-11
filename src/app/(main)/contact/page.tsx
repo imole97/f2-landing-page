@@ -3,6 +3,7 @@ import Container from "@/components/layout/Container";
 import React from "react";
 import ContactForm from "@/components/contact/ContactForm";
 import { EmailIcon, LocationIcon, PhoneIcon } from "@/components/icons";
+import Link from "next/link";
 
 const Contact = () => {
   return (
@@ -22,25 +23,32 @@ const Contact = () => {
             <div className="space-y-4 pt-9">
               <div className="bg-white text-black rounded-2xl p-4 flex items-center gap-4">
                 <div className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center">
-                  <EmailIcon/>
+                  <EmailIcon />
                 </div>
                 <div>
                   <div className="text-sm text-gray-500">Email</div>
-                  <div className="font-medium">email@company.com</div>
+                  <Link
+                    href="mailto:hello@firstfounders.cc"
+                    className="font-medium"
+                  >
+                    hello@firstfounders.cc
+                  </Link>
                 </div>
               </div>
               <div className="bg-white text-black rounded-2xl p-4 flex items-center gap-4">
                 <div className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center">
-                  <PhoneIcon/>
+                  <PhoneIcon />
                 </div>
                 <div>
                   <div className="text-sm text-gray-500">Phone</div>
-                  <div className="font-medium">(+1) 1234 567 891</div>
+                  <Link href="tel:+2348035776246" className="font-medium">
+                    +234 803 577 6246
+                  </Link>
                 </div>
               </div>
               <div className="bg-white text-black rounded-2xl p-4 flex items-center gap-4">
                 <div className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center">
-                  <LocationIcon/>
+                  <LocationIcon />
                 </div>
                 <div>
                   <div className="text-sm text-gray-500">Address</div>
