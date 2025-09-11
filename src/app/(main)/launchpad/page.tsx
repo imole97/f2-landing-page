@@ -74,36 +74,38 @@ const LaunchPad = () => {
           ))}
         </Container>
       </section>
-      <section className="bg-white ">
-        <Container className="bg-[#EBFAFA] rounded-[20px] p-6 text-[#040404]">
-          <h4 className="text-4xl">
-            This is a{" "}
-            <span className="font-bold">PAID Venture-Building Program</span>{" "}
-            designed for serious individuals committed to building successful
-            ventures.
-          </h4>
-          <div className="bg-white mt-10 rounded-[20px] p-6">
-            <p className="text-3xl font-medium">What We Offer</p>
-            <div className="grid grid-cols-1 mt-6 gap-6 sm:grid-cols-2">
-              {offering.map((item) => (
-                <div
-                  key={item.label}
-                  className="bg-[#EBFAFA] flex flex-col md:flex-row gap-10 p-10 rounded-lg"
-                >
-                  <div className="flex-shrink-0">
-                    <CustomImage
-                      src={item.img}
-                      alt={item.label}
-                      className={`${item.aspect} w-14 md:w-20`}
-                    />
-                  </div>
-                  <div>
-                    <h5 className="text-2xl font-bold">{item.label}</h5>
-                    <p className="text-lg">{item.content}</p>
-                  </div>
+      <section className="bg-[#0D102F]">
+        <Container className="rounded-[20px] py-10 text-[#040404]">
+          <div className="text-white space-y-3">
+            <h4 className="font-medium  max-w-[1300px] mx-auto text-center text-xl sm:text-4xl md:text-3xl lg:text-5xl">
+              What We Offer
+            </h4>
+            <p className="max-w-[1060px] text-xl text-center mx-auto w-full">
+              We believe in a hands-on approach that goes beyond traditional
+              mentorship. We're in the entire building process with you,
+              providing the operational muscle and strategic guidance you need
+              to succeed.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 mt-6 gap-6 sm:grid-cols-2">
+            {offering.map((item) => (
+              <div
+                key={item.label}
+                className="bg-[#EBFAFA] flex flex-col md:flex-row gap-10 p-10 rounded-lg"
+              >
+                <div className="flex-shrink-0">
+                  <CustomImage
+                    src={item.img}
+                    alt={item.label}
+                    className={`${item.aspect} w-14 md:w-20`}
+                  />
                 </div>
-              ))}
-            </div>
+                <div>
+                  <h5 className="text-2xl font-bold">{item.label}</h5>
+                  <p className="text-lg">{item.content}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </Container>
       </section>
