@@ -15,30 +15,42 @@ const LaunchPad = () => {
     <>
       <section className="bg-[#0D102F] text-white py-40">
         <Container className="">
-          <h2 className="text-4xl md:text-7xl text-center font-bold mb-5">
+          <h2 className="text-4xl max-w-[800px] mx-auto md:text-6xl text-center font-bold mb-5">
             Launch Your Venture with the FirstFounders Venture Launchpad
             (F2-LaunchPad)
           </h2>
-          <p className="text-center text-xl">
-            Ready to build a high-growth venture? The FirstFounders Venture
-            LaunchPad (F2-LaunchPad) is a{" "}
-            <span className="font-bold">PAID venture-building program</span>{" "}
-            where we build for you using our proven venture studio playbook,
-            providing you end-to-end, hands-on venture-building support to bring
-            your bold AI or startup idea to life.
-          </p>
-          <div className="flex justify-center my-10">
+          <div className="max-w-[800px] space-y-5 bg-[#33CCCC] text-[#0D102F] font-medium p-5 rounded-3xl mx-auto mt-6">
+            <p className="text-center text-xl">
+              <span className="font-bold">
+                Ready to build a high-growth venture?
+              </span>{" "}
+              The FirstFounders Venture Launchpad (F2-Launchpad) is a
+              specialized, results-driven program designed to transform the
+              ideas of aspiring founders, corporate innovators, SME leaders, and
+              tech entrepreneurs into successful ventures
+            </p>
+            <p className="text-center text-xl">
+              Leveraging our proven venture studio playbook, we guide a select
+              group of participants through a structured journey, from initial
+              clarity to scalable growth. This isn't just a program; it's a
+              partnership. We become your partner for growth from day one,
+              providing the hands-on support and capital efficiency of a venture
+              studio.
+            </p>
+          </div>
+          <div className="flex gap-10 my-10 items-center justify-center">
             <Link
               target="_blank"
               href="https://calendly.com/thefirstfounders/60min"
-              className="bg-[#FFBB00] text-[#0D102F] font-bold mt-10 items-center py-3.5 px-5 w-fit rounded-full flex gap-2"
+              className="bg-[#FFBB00] text-[#0D102F] font-bold items-center py-3.5 px-5 w-fit rounded-full flex gap-2"
             >
               <span>Book A Clarity Session</span>
-              <Icon
-                icon="material-symbols:arrow-forward-rounded"
-                width="16"
-                height="16"
-              />
+            </Link>
+            <Link
+              href="/download"
+              className="bg-[#FFFFFF] text-[#0D102F] font-bold items-center py-3.5 px-5 w-fit rounded-full flex gap-2"
+            >
+              <span>Download Program Booklet</span>
             </Link>
           </div>
           <CustomImage
