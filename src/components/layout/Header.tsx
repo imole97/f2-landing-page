@@ -29,7 +29,7 @@ const navHeaders = [
     subMenu: [
       { title: "F2-Venture Studio Program", route: "" },
       { title: "F2-Venture Launchpad", route: "/launchpad" },
-      { title: "F2-Venture Acceleration Program", route: "" },
+      // { title: "F2-Venture Acceleration Program", route: "" },
     ],
   },
   {
@@ -53,15 +53,15 @@ const navHeaders = [
       { title: "Build Boldly", route: "" },
     ],
   },
-  {
-    title: "SubUnits",
-    hasDropdown: true,
-    route: "",
-    subMenu: [
-      { title: "F2 Republic", route: "" },
-      { title: "F2Bank", route: "" },
-    ],
-  },
+  // {
+  //   title: "SubUnits",
+  //   hasDropdown: true,
+  //   route: "",
+  //   subMenu: [
+  //     { title: "F2 Republic", route: "" },
+  //     { title: "F2Bank", route: "" },
+  //   ],
+  // },
 ];
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
