@@ -380,7 +380,7 @@ export const programDetails = {
     title: "Ideation - MVP",
     summary: "A 10-month journey to turn your idea into a high-growth business.",
     investmentLabel: "Investment",
-    investment: "$20,000",
+    investment: "$25,000",
     whatYouGetTitle: "What You Get:",
     features: [
         "A high-growth idea, pitch deck, and financial model.",

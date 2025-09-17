@@ -312,7 +312,7 @@ export default function CohortApplicationForm({
               Are you ready to pay for this venture-building program if
               selected?
             </div>
-            <p className=" text-gray-500">Note: This program costs $20,000</p>
+            <p className=" text-gray-500">Note: This program costs $25,000</p>
             <div className="flex gap-4 pt-2">
               {["Yes", "No"].map((val) => (
                 <label
