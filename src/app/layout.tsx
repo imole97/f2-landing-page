@@ -33,7 +33,6 @@ export default function RootLayout({
       <body className={`${satoshi.variable} antialiased min-h-screen`}>
         {children}
         <Analytics />
-        <div className="fixed inset-0 z-[9999] bg-white" />
       </body>
     </html>
   );
