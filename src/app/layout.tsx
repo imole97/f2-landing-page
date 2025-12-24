@@ -1,10 +1,8 @@
 "use client";
 import { Analytics } from "@vercel/analytics/next";
-import type { Metadata } from "next";
 import "./globals.css";
 import { satoshi } from "@/config/font";
 import { useEffect, useState } from "react";
-import { Icon } from "@iconify/react/dist/iconify.js";
 
 // export const metadata: Metadata = {
 //   title: "Create Next App",
@@ -21,7 +19,6 @@ export default function RootLayout({
   useEffect(() => {
     const handleScroll = () => {
       setShowBackToTop(window.scrollY > 300);
-
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -36,6 +33,7 @@ export default function RootLayout({
       <body className={`${satoshi.variable} antialiased min-h-screen`}>
         {children}
         <Analytics />
+        <div className="fixed inset-0 z-[9999] bg-white" />
       </body>
     </html>
   );
